@@ -1,0 +1,301 @@
+/* 
+
+IMPORTING STYLE-GUIDE
+
+ */
+
+:root {
+
+    /* ### Primary */
+
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+
+    /* ### Neutral */
+
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+
+    /* ### Gradients */
+
+    --Linear1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    --Linear2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    /* ## Typography
+
+### Body Copy */
+
+    --Font-size: 16px;
+    --Family: 'Josefin Sans';
+    --Font-Weights: 300, 400, 600;
+}
+
+
+/* 
+
+MAIN STYLING BEGINS HERE
+
+*/
+
+article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    max-width: 98rem;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    background-image: url(/images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 15% 10%;
+    text-align: left;
+    width: 100%;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.base-apparel {
+    max-height: 2.5rem;
+    width: 16%;
+    position: absolute;
+    top: 2rem;
+}
+
+.title {
+    font-size: 55px;
+    text-transform: uppercase;
+    line-height: 3.5rem;
+    letter-spacing: 20px;
+    width: 18rem;
+    font-weight: 900;
+    font-family: 'Josefin Sans';
+    position: relative;
+}
+
+.title span {
+    color: var(--Desaturated-Red);
+    font-weight: 300;
+    position: absolute;
+    font-size: 5rem;
+}
+
+.title h2 {
+    line-height: 5rem;
+}
+
+p {
+    width: 86%;
+    letter-spacing: 2px;
+    gap: 10px;
+    display: flex;
+    line-height: 23px;
+    color: var(--Desaturated-Red);
+    font-weight: bold;
+    font-family: 'Josefin Sans';
+    margin-top: -27px;
+    margin-bottom: 3rem;
+}
+
+.hero img {
+    height: 100%;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    /* White box shadow */
+}
+
+.btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: hsl(0, 70%, 89%);
+    background-image: none;
+    transition: transform .5s;
+    border-color: transparent;
+    box-shadow: 0px 10px 20px rgba(255, 182, 193, 0.5);
+}
+
+input::placeholder {
+    color: rgb(228, 211, 211);
+    font-family: 'Josefin Sans';
+}
+
+.form-bar {
+    display: flex;
+    align-items: center;
+    max-width: 30rem;
+}
+
+input:focus {
+    outline: 1px solid #f90000;
+}
+
+.btn {
+    width: 16%;
+    padding: 18px;
+    border: 1px solid #cfabab;
+    border-radius: 3rem;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border-color: transparent;
+    box-shadow: 0px 10px 20px rgba(255, 182, 193, 0.5);
+    position: static;
+    min-width: 93px;
+    max-width: 245px;
+    min-height: 56px;
+    max-height: 94px;
+    display: flex;
+    justify-content: center;
+    margin-left: -78px
+}
+
+input {
+    width: 100%;
+    padding: 1.1rem;
+    border: 0.1rem solid #cfabab;
+    border-radius: 3rem;
+    box-sizing: border-box;
+    font-size: 1rem;
+    background: transparent;
+}
+
+h5 {
+    display: none;
+    color: var(--Soft-Red);
+    margin-left: 20px;
+    margin-top: 8px;
+}
+
+
+#error-icon {
+    display: none;
+    content: url(/images/icon-error.svg);
+    position: relative;
+    right: 5rem;
+
+}
+
+.attribution {
+    width: unset;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
+/* 
+
+FOR ALL SCREENS BELOW 1024px
+
+*/
+
+
+@media only screen and (max-width: 1024px) {
+
+    article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+        max-width: 18.7rem;
+        align-items: center;
+    }
+
+    .hero img {
+        content: url(/images/hero-mobile.jpg);
+
+    }
+
+    .hero {
+        display: flex;
+        justify-content: center;
+    }
+
+    .main-container {
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        position: unset;
+        padding: 16px 37px;
+        text-align: center;
+    }
+
+    main::after {
+        content: url('../images/logo.svg');
+        margin-bottom: 1rem;
+        margin-right: 12rem;
+        transform: scale(0.7);
+    }
+
+
+    .title {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1rem;
+        line-height: 42px;
+        margin-bottom: 1rem;
+        letter-spacing: 12px;
+        margin-top: 1rem;
+        padding-top: 3rem;
+    }
+
+    .base-apparel {
+        max-width: 100%;
+        top: 8rem;
+        display: none;
+
+    }
+
+    .title span {
+        font-size: 2.4rem;
+        line-height: 10px;
+        margin-bottom: -15px;
+    }
+
+    .title h2 {
+        line-height: 3rem;
+        font-size: 2.4rem;
+        letter-spacing: 12px;
+    }
+
+    p {
+        width: unset;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        color: var(--Desaturated-Red);
+        font-weight: 600;
+    }
+
+    form {
+        padding-bottom: 4rem;
+    }
+
+    h5 {
+        margin-left: -4rem;
+        margin-top: -4rem;
+    }
+
+    input {
+        font-size: 12.5px;
+    }
+
+    .attribution {
+        font-size: 11px;
+        display: flex;
+        margin-bottom: 7rem;
+        letter-spacing: unset;
+    }
+}
