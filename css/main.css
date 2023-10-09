@@ -175,7 +175,7 @@ h5 {
 
 #error-icon {
     display: none;
-    content: url(/images/icon-error.svg);
+    content: url(./images/icon-error.svg);
     position: relative;
     right: 5rem;
 
