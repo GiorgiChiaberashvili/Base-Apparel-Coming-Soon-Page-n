@@ -183,6 +183,10 @@ h5 {
 
 .attribution {
     width: unset;
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: unset;
+    margin-top: unset;
 }
 
 footer {
@@ -294,8 +298,8 @@ FOR ALL SCREENS BELOW 1024px
 
     .attribution {
         font-size: 11px;
-        display: flex;
-        margin-bottom: 7rem;
+/*         display: flex; */
+/*         margin-bottom: 7rem; */
         letter-spacing: unset;
     }
 }
